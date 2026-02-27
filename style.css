@@ -1,66 +1,98 @@
-/* Общие заголовки секций */
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-top: 80px;
-    color: #007bff;
-    text-transform: uppercase;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #121212;
+    color: white;
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
-/* Секция Главная (Hero) */
+header {
+    background: #1a1a1a;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #007bff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .hero {
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000');
     background-size: cover;
-    text-align: center;
+    margin-top: 60px;
 }
 
-.btn-main {
+.section-title { text-align: center; color: #007bff; margin-top: 50px; }
+
+.catalog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-card {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    border: 1px solid #333;
+}
+
+.product-image { font-size: 60px; margin-bottom: 15px; }
+
+.buy-btn, .order-btn {
     background: #007bff;
     color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
 }
 
-/* Секция О нас */
-.about-section {
-    background: #1a1a1a;
-    padding: 50px 20px;
-    text-align: center;
-}
-.about-container { max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ccc; }
-
-/* Форма заказа */
-.order-section { padding-bottom: 100px; }
 .order-form {
     max-width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding-bottom: 50px;
 }
 
-.order-form input, .order-form select {
-    padding: 12px;
-    border-radius: 8px;
+.order-form input {
+    padding: 10px;
+    border-radius: 5px;
     border: 1px solid #333;
     background: #252525;
     color: white;
-}
-
-.order-btn {
-    background: #28a745; /* Зеленая кнопка для заказа */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
 }
