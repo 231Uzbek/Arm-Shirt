@@ -1,18 +1,67 @@
-/* --- ЛЕЧИМ КАРТИНКИ, ЧТОБЫ ВЛЕЗЛИ --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* 1. Задаем фиксированный размер контейнеру для фото */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding-top: 80px; /* Отступ под шапку */
+}
+
+/* Сетка каталога */
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы товары переносились на новую строку */
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Карточка товара */
+.product-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px; /* Фиксированная ширина */
+    text-align: center;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #007bff;
+}
+
+/* Исправляем картинки! */
 .product-image-box {
-    width: 100%;       /* Ширина на всю карточку */
-    height: 220px;     /* Фиксированная высота (картинки станут одинаковыми) */
-    overflow: hidden;   /* Всё, что не влезло, будет скрыто (обрезано) */
-    border-radius: 10px; /* Скругляем углы блока */
-    margin-bottom: 15px; /* Отступ до названия товара */
+    width: 100%;
+    height: 300px; /* Высота картинки */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-/* 2. Заставляем саму картинку заполнить контейнер без искажений */
 .product-image-box img {
-    width: 100%;       /* Растягиваем по ширине контейнера */
-    height: 100%;      /* Растягиваем по высоте контейнера */
-    object-fit: cover; /* КРИТИЧЕСКИ ВАЖНО: фото заполняет блок, лишнее обрезается, пропорции сохраняются */
-    object-position: center; /* Центрируем фото внутри блока */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото заполнит блок и не растянется */
 }
+
+/* Кнопка */
+.buy-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.buy-btn:hover { background: #0056b3; }
+
+/* Секция заголовка */
+.section-title { text-align: center; font-size: 32px; color: #007bff; }
