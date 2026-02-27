@@ -1,10 +1,5 @@
-let count = 0;
-const cartDisplay = document.getElementById('cart-count');
-
-document.querySelectorAll('.buy-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        count++;
-        cartDisplay.innerText = count;
-        alert('Ура! Товар AndShirt добавлен в корзину.');
-    });
+document.getElementById('orderForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Спасибо за заказ в AndShirt! Мы свяжемся с вами в ближайшее время.');
+    e.target.reset(); // Очистить форму
 });
