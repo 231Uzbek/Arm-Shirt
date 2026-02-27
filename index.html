@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AndShirt — Магазин одежды</title>
+    <title>AndShirt — Официальный магазин</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,25 +12,69 @@
             <div class="logo">AndShirt</div>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">О нас</a></li>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#order">Заказать</a></li>
                 </ul>
             </nav>
             <div class="cart">🛒 <span id="cart-count">0</span></div>
         </div>
     </header>
 
-    <main>
+    <section id="home" class="hero">
+        <h1>AndShirt — Твой стиль, твои правила</h1>
+        <p>Качественная одежда с уникальным дизайном</p>
+        <a href="#catalog" class="btn-main">Перейти к покупкам</a>
+    </section>
+
+    <section id="catalog">
+        <h2 class="section-title">Наш Каталог</h2>
         <div class="catalog">
             <div class="product-card">
                 <div class="product-image">👕</div>
                 <h3>Базовая футболка</h3>
                 <p>1500 ₽</p>
                 <button class="buy-btn">В корзину</button>
+</div>
+            <div class="product-card">
+                <div class="product-image">🧥</div>
+                <h3>Худи Premium</h3>
+                <p>3500 ₽</p>
+                <button class="buy-btn">В корзину</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🧢</div>
+                <h3>Кепка AndShirt</h3>
+                <p>1200 ₽</p>
+                <button class="buy-btn">В корзину</button>
             </div>
         </div>
-    </main>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="section-title">О нас</h2>
+        <div class="about-container">
+            <p>AndShirt — это бренд для тех, кто ценит комфорт и минимализм. Мы начали в 2024 году с одной футболки, а сегодня создаем полноценные коллекции для современных людей.</p>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2 class="section-title">Оформить заказ</h2>
+        <form class="order-form" id="orderForm">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Номер телефона" required>
+            <select>
+                <option value="delivery">Доставка курьером</option>
+                <option value="pickup">Самовывоз</option>
+            </select>
+            <button type="submit" class="order-btn">Оформить покупку</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 AndShirt. Все права защищены.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
