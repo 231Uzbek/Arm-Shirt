@@ -1,32 +1,18 @@
-/* Контейнер для фото внутри карточки */
+/* --- ЛЕЧИМ КАРТИНКИ, ЧТОБЫ ВЛЕЗЛИ --- */
+
+/* 1. Задаем фиксированный размер контейнеру для фото */
 .product-image-box {
-    width: 100%;
-    height: 250px;
-    background: #252525;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    overflow: hidden; /* Скрывает всё, что выходит за края */
+    width: 100%;       /* Ширина на всю карточку */
+    height: 220px;     /* Фиксированная высота (картинки станут одинаковыми) */
+    overflow: hidden;   /* Всё, что не влезло, будет скрыто (обрезано) */
+    border-radius: 10px; /* Скругляем углы блока */
+    margin-bottom: 15px; /* Отступ до названия товара */
 }
 
-/* Стиль самой картинки */
+/* 2. Заставляем саму картинку заполнить контейнер без искажений */
 .product-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Картинка заполняет блок без искажений */
-    transition: transform 0.5s ease;
-}
-
-/* Эффект приближения фото при наведении */
-.product-card:hover .product-image-box img {
-    transform: scale(1.1);
-}
-
-/* Сетка каталога (чтобы товары стояли красиво) */
-.catalog {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 20px;
+    width: 100%;       /* Растягиваем по ширине контейнера */
+    height: 100%;      /* Растягиваем по высоте контейнера */
+    object-fit: cover; /* КРИТИЧЕСКИ ВАЖНО: фото заполняет блок, лишнее обрезается, пропорции сохраняются */
+    object-position: center; /* Центрируем фото внутри блока */
 }
