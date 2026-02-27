@@ -1,50 +1,66 @@
-body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #1a1a1a; color: white; }
-
-header {
-    background: #252525;
-    padding: 15px 0;
-    border-bottom: 2px solid #007bff;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-menu a { color: white; text-decoration: none; font-weight: bold; }
-.nav-menu a:hover { color: #007bff; }
-
-.cart { background: #333; padding: 8px 15px; border-radius: 20px; }
-
-.catalog { padding: 60px; display: flex; justify-content: center; }
-
-.product-card {
-    background: #2a2a2a;
-    padding: 30px;
-    border-radius: 20px;
+/* Общие заголовки секций */
+.section-title {
     text-align: center;
-    border: 1px solid #444;
+    font-size: 32px;
+    margin-top: 80px;
+    color: #007bff;
+    text-transform: uppercase;
 }
 
-.product-image { font-size: 80px; margin-bottom: 20px; }
+/* Секция Главная (Hero) */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    text-align: center;
+}
 
-.buy-btn {
+.btn-main {
     background: #007bff;
     color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 10px;
-    cursor: pointer;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
-.buy-btn:hover { background: #0056b3; }
+/* Секция О нас */
+.about-section {
+    background: #1a1a1a;
+    padding: 50px 20px;
+    text-align: center;
+}
+.about-container { max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ccc; }
+
+/* Форма заказа */
+.order-section { padding-bottom: 100px; }
+.order-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-form input, .order-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #252525;
+    color: white;
+}
+
+.order-btn {
+    background: #28a745; /* Зеленая кнопка для заказа */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
