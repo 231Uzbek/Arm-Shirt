@@ -15,9 +15,8 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     // ВСТАВЬ СВОИ ДАННЫЕ СЮДА:
-    const token = "ВСТАВЬ_СЮДА_ТОКЕН_ОТ_BOTFATHER";
-    const chatId = "ВСТАВЬ_СЮДА_ID_ОТ_USERINFOBOT";
-
+    const token = "8674173226:AAGztTss8Jsyw_HvMdxfhMelaasvl1s4gVM";
+    const chatId = "7843555995
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     
@@ -32,3 +31,4 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         }
     });
 });
+
