@@ -23,58 +23,49 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>AndShirt — Твой стиль, твои правила</h1>
-        <p>Качественная одежда с уникальным дизайном</p>
-        <a href="#catalog" class="btn-main">Перейти к покупкам</a>
+        <h1>AndShirt</h1>
+        <p>Стиль, который говорит за тебя</p>
+        <a href="#catalog" class="btn-main">В каталог</a>
     </section>
 
-    <section id="catalog">
-        <h2 class="section-title">Наш Каталог</h2>
-        <div class="catalog">
+    <section id="catalog" class="container">
+        <h2 class="section-title">Каталог</h2>
+        <div class="catalog-grid">
             <div class="product-card">
                 <div class="product-image">👕</div>
-                <h3>Базовая футболка</h3>
+                <h3>Футболка</h3>
                 <p>1500 ₽</p>
                 <button class="buy-btn">В корзину</button>
-</div>
+            </div>
             <div class="product-card">
                 <div class="product-image">🧥</div>
-                <h3>Худи Premium</h3>
+                <h3>Худи</h3>
                 <p>3500 ₽</p>
                 <button class="buy-btn">В корзину</button>
             </div>
             <div class="product-card">
                 <div class="product-image">🧢</div>
-                <h3>Кепка AndShirt</h3>
+                <h3>Кепка</h3>
                 <p>1200 ₽</p>
                 <button class="buy-btn">В корзину</button>
             </div>
         </div>
     </section>
-
     <section id="about" class="about-section">
-        <h2 class="section-title">О нас</h2>
-        <div class="about-container">
-            <p>AndShirt — это бренд для тех, кто ценит комфорт и минимализм. Мы начали в 2024 году с одной футболки, а сегодня создаем полноценные коллекции для современных людей.</p>
+        <div class="container">
+            <h2 class="section-title">О нас</h2>
+            <p>AndShirt — это молодой бренд качественной одежды. Мы создаем вещи, которые хочется носить каждый день.</p>
         </div>
     </section>
 
-    <section id="order" class="order-section">
+    <section id="order" class="container">
         <h2 class="section-title">Оформить заказ</h2>
         <form class="order-form" id="orderForm">
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="tel" placeholder="Номер телефона" required>
-            <select>
-                <option value="delivery">Доставка курьером</option>
-                <option value="pickup">Самовывоз</option>
-            </select>
-            <button type="submit" class="order-btn">Оформить покупку</button>
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="tel" id="phone" placeholder="Ваш телефон" required>
+            <button type="submit" class="order-btn">Отправить заявку</button>
         </form>
     </section>
-
-    <footer>
-        <p>© 2026 AndShirt. Все права защищены.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
